@@ -6,7 +6,15 @@ We appreciate your time and effort in completing this task and expect the task t
 
 ## Task Overview
 
-In this assignment, you will be working on a project that aligns with Gaea's mission and technology stack. The task involves [brief description of the task, e.g., "developing a data processing pipeline for environmental data"].
+In this assignment, you will be working on a project that aligns with Gaea's mission and technology stack. Gaea's core functionality tracks the recycling process for end of life materials such as batteries, E-Waste and other recyclable materials.
+
+When a material is recycled it often goes through a multi-stage process. Each of these processes result in multiple new materials resulting from the first. For example, you may sort through a drum of mixed household batteries (AA, AAA, 9V etc) and sort them into brands (Duracell, Energizer, etc). The resulting weight of each of material is what Gaea tracks, we call these material transfers.
+
+This allows recyclers to track material from the start of the process to the end, meaning they can work out for example How much of my duracell batteries came from a specific supplier. These processes can also happen in batches (more than one input), this means we have to average the output weights over the inputs, this is called a mass balance, this results in less accurate transfers, but is often easier and faster to implement in a recycling facility.
+
+![Material transfers](./assets/transfers.png)
+
+In this task you will be using these material transfers to answer similar questions that our customers have, and are most important to them.
 
 ## Instructions
 
@@ -22,7 +30,25 @@ Please complete all of the following tasks. You may use any programming language
 
 ### Task 1
 
+In this repository, you'll find a csv file `transfers.csv`. This file contains a sample of material transfer that we set out in the overview section. The structure is as follows:
+
+| Column        | Type     | Description                                                               |
+| ------------- | -------- | ------------------------------------------------------------------------- |
+| organization  | UUID     | Organization the material transfer belongs to                             |
+| from_material | UUID     | Material the transfer originated from                                     |
+| to_material   | UUID     | Material transferred to                                                   |
+| weight        | Integer  | Total amount in kilograms transfers from `from_material` to `to_material` |
+| date          | DateTime | When the transfer ocurred                                                 |
+
+Your first task is to take this csv and find the organization who process the most material on X and how much material in kilograms they processed. Your answer should state the UUID of the organization and the total amount of kilograms processed.
+
+**Answer:**
+
 ### Task 2
+
+A material transfer is said to be the same as another if they are from the same material and to the same material. What was the most common transfer from one material to another and how many transfers of this type were there.
+
+**Answer:**
 
 ### Task 3
 
