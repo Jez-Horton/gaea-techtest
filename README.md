@@ -52,6 +52,18 @@ A material transfer is said to be the same as another if they are from the same 
 
 ### Task 3
 
+During a multi step process where material A is processed to materials (X, Y, Z, ...) and then material B is processed to material C. We can approximate how much of material A is in material C by using a mass balance:
+
+```tex
+Transfers A -> C = SUM(SUM(Transfers A -> N) / SUM(Transfers -> N) * SUM(Transfers N -> C))
+```
+
+Where N are the intermidiate material X, Y, Z, ...etc.
+
+With this in mind calculate how much of material `4d876d21-f841-4461-9122-799331c39527` ended up in material `d2523f75-6e98-4654-a261-61e3f09e1eb8` across all organizations.
+
+**Answer:**
+
 ## Submission
 
 Once you've completed the task, make sure:
