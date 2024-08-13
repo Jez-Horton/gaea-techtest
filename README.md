@@ -6,7 +6,7 @@ We appreciate your time and effort in completing this task and expect the task t
 
 ## Task Overview
 
-In this assignment, you will be working on a project that aligns with Gaea's mission and technology stack. Gaea's core functionality tracks the recycling process for end of life materials such as batteries, E-Waste and other recyclable materials.
+In this assignment, you will be working on a project that aligns with Gaea's mission and technology stack. Gaea's core functionality tracks the recycling process for end of life materials such as batteries, electronic waste and other recyclable materials.
 
 When a material is recycled it often goes through a multi-stage process. Each of these processes result in multiple new materials resulting from the first. For example, you may sort through a drum of mixed household batteries (AA, AAA, 9V etc) and sort them into brands (Duracell, Energizer, etc). The resulting weight of each of material is what Gaea tracks, we call these material transfers.
 
