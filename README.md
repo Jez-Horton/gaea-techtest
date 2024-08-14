@@ -40,7 +40,7 @@ In this repository, you'll find a csv file `transfers.csv`. This file contains a
 | weight        | Integer  | Total amount in kilograms transfers from `from_material` to `to_material` |
 | date          | DateTime | When the transfer ocurred                                                 |
 
-Your first task is to take this csv and find the organization who process the most material on X and how much material in kilograms they processed. Your answer should state the UUID of the organization and the total amount of kilograms processed.
+Your first task is to take this csv and find the organization who process the most material on 7th August 2024 and how much material in kilograms they processed. Your answer should state the UUID of the organization and the total amount of kilograms processed.
 
 **Answer:**
 
