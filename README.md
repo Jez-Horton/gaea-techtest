@@ -40,22 +40,22 @@ In this repository, you'll find a csv file `transfers.csv`. This file contains a
 | weight        | Integer  | Total amount in kilograms transfers from `from_material` to `to_material` |
 | date          | DateTime | When the transfer ocurred                                                 |
 
-Your first task is to take this csv and find the organization who processed the most material on 7th August 2024 and how much material in kilograms they processed. Your answer should state the UUID of the organization and the total amount of kilograms processed.
+Your first task is to take this csv and find the organization that processed the most material on 7th August 2024 and how much material in kilograms they processed on this date. Your answer should state the UUID of the organization and the total amount of kilograms processed.
 
 **Answer:**
 
 ### Task 2
 
-A material transfer is said to be the same as another if they are from the same material and to the same material. What was the most common transfer from one material to another and how many transfers of this type were there.
+A material transfer is said to be the same as another if they are from the same material and to the same material. What was the most common transfer from one material to another and how many transfers of this type were there?
 
 **Answer:**
 
 ### Task 3
 
-During a multi step process where material A is processed to materials (X, Y, Z, ...) and then material B is processed to material C. We can approximate how much of material A is in material C by using a mass balance:
+During a multi step process where material A is processed to materials (X, Y, Z, ...) and then these materials (X, Y, Z, ...) are processed to material B. We can approximate how much of material A is in material B by using a mass balance:
 
 ```tex
-Transfers A -> C = SUM(SUM(Transfers A -> N) / SUM(Transfers -> N) * SUM(Transfers N -> C))
+Transfers A -> B = SUM(SUM(Transfers A -> N) / SUM(Transfers -> N) * SUM(Transfers N -> B))
 ```
 
 Where N are the intermidiate material X, Y, Z, ...etc.
