@@ -26,7 +26,7 @@ In this task you will be using these material transfers to answer similar questi
 
 Please ensure all of your work is committed to the main branch and pushed to your personal repository, as this is the only work we'll consider.
 
-Please complete all of the following tasks. You may use any programming language, provided all of the code used can be committed to this repository. You don't need to provide instructions for running the code, or any explanation other than the answers.
+Please complete all of the following tasks. You may use any programming language, provided all of the code used can be committed to this repository. You don't need to provide instructions for running the code, or any explanation other than the answers. We're looking to assess how you write and structure code, so please don't just use SQL.
 
 ### Task 1
 
