@@ -60,6 +60,8 @@ Transfers A -> B = SUM(SUM(Transfers A -> N) / SUM(Transfers -> N) * SUM(Transfe
 
 Where N are the intermidiate material X, Y, Z, ...etc.
 
+![example](./assets/mass-balance.png)
+
 With this in mind calculate how much of material `4d876d21-f841-4461-9122-799331c39527` ended up in material `d2523f75-6e98-4654-a261-61e3f09e1eb8` across all organizations.
 
 **Answer:**
