@@ -43,7 +43,7 @@ In this repository, you'll find a csv file `transfers.csv`. This file contains a
 Your first task is to take this csv and find the organization that processed the most material on 7th August 2024 and how much material in kilograms they processed on this date. Your answer should state the UUID of the organization and the total amount of kilograms processed.
 
 **Answer:**
-
+{"organization":"22542f6e-3d68-4f15-92f6-a864d49746cb","totalWeight":1901}
 ### Task 2
 
 A material transfer is said to be the same as another if they are from the same material and to the same material. What was the most common transfer from one material to another and how many transfers of this type were there?
