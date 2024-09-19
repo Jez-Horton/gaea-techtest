@@ -28,16 +28,15 @@ export const filterTransfersByDate = (data: transfers[], date: string): transfer
     const transferCounts: Record<string, number> = {};
   
     transfers.forEach(transfer => {
-      const key = `${transfer.from_material}->${transfer.organization}`; // Create a unique key for the transfer
+      const key = `${transfer.from_material}->${transfer.organization}`;
   
       if (!transferCounts[key]) {
         transferCounts[key] = 0;
       }
   
-      transferCounts[key] += 1; // Increment the count for this type of transfer
+      transferCounts[key] += 1; 
     });
   
-    // Find the most common transfer
     let maxCount = 0;
     let mostCommonTransfer = { from_material: '', to_material: '', count: 0 };
   
@@ -45,7 +44,6 @@ export const filterTransfersByDate = (data: transfers[], date: string): transfer
       if (count > maxCount) {
         maxCount = count;
   
-        // Split the key back into from_material and to_material (organization)
         const [from_material, to_material] = key.split('->');
         mostCommonTransfer = { from_material, to_material, count };
       }

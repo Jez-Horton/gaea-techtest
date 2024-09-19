@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import csv from 'csv-parser';
 import { filterTransfersByDate, findTopOrganization, findMostCommonTransfer} from './services/filterService';
-import { calculateTotalWeightByOrganization } from './services/calculationService';
+import { calculateTotalWeightByOrganization, calculateMaterialAToB } from './services/calculationService';
 const app = express();
 const PORT = process.env.PORT || 5000;
 const filepath = '../../transfers.csv';
@@ -32,7 +32,22 @@ const readCSV = (filePath: string): Promise<any[]> => {
       res.status(500).json({ message: 'Error reading CSV file', error });
     }
   });
-
+  app.get('/api/material-transfer', async (req: Request, res: Response) => {
+    try {
+      const filePath = path.join(__dirname, filepath);
+      const data = await readCSV(filePath);
+            //TODO: Make this param to calc different mats
+      const materialA = '4d876d21-f841-4461-9122-799331c39527'; // A
+      const materialB = 'd2523f75-6e98-4654-a261-61e3f09e1eb8'; // B
+  
+      const totalTransfer = calculateMaterialAToB(data, materialA, materialB);
+  
+      res.json({ materialA, materialB, totalTransfer });
+    } catch (error) {
+      res.status(500).json({ message: 'Error processing CSV data', error });
+    }
+  });
+  
   app.get('/api/top-organization', async (req: Request, res: Response) => {
     try {
       const filePath = path.join(__dirname, filepath);
