@@ -8,6 +8,7 @@
     "dev": "ts-node src/app.ts"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "csv-parser": "^2.3.5",
     "express": "^4.17.1"
   },

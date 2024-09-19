@@ -4,11 +4,15 @@ import path from 'path';
 import csv from 'csv-parser';
 import { filterTransfersByDate, findTopOrganization, findMostCommonTransfer} from './services/filterService';
 import { calculateTotalWeightByOrganization, calculateMaterialAToB } from './services/calculationService';
+
 const app = express();
+const cors = require('cors');
 const PORT = process.env.PORT || 5000;
 const filepath = '../../transfers.csv';
 
+app.use(cors());
 
+app.use(express.json());
 const readCSV = (filePath: string): Promise<any[]> => {
     return new Promise((resolve, reject) => {
       const results: any[] = [];
