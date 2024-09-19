@@ -71,5 +71,5 @@ export const calculateMaterialAToB = (
   
     console.log('Total Transfers A to B:', totalTransfersAtoB);
   
-    return totalTransfersAtoB > 0 ? totalTransfersAtoB : 0; // Return null if there's no valid transfer
+    return totalTransfersAtoB > 0 ? totalTransfersAtoB : 0; // Return 0 if there's no valid transfer
   };
