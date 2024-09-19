@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express';
 import fs from 'fs';
 import path from 'path';
 import csv from 'csv-parser';
-import { filterTransfersByDate, findTopOrganization } from './services/filterService';
+import { filterTransfersByDate, findTopOrganization, findMostCommonTransfer} from './services/filterService';
 import { calculateTotalWeightByOrganization } from './services/calculationService';
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -46,6 +46,19 @@ const readCSV = (filePath: string): Promise<any[]> => {
       const topOrganization = findTopOrganization(totals);
       
       res.json(topOrganization);
+    } catch (error) {
+      res.status(500).json({ message: 'Error processing CSV data', error });
+    }
+  });
+
+  app.get('/api/most-common-transfer', async (req: Request, res: Response) => {
+    try {
+      const filePath = path.join(__dirname, filepath);
+      const data = await readCSV(filePath);
+  
+      const mostCommonTransfer = findMostCommonTransfer(data);
+  
+      res.json(mostCommonTransfer);
     } catch (error) {
       res.status(500).json({ message: 'Error processing CSV data', error });
     }

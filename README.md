@@ -42,14 +42,12 @@ In this repository, you'll find a csv file `transfers.csv`. This file contains a
 
 Your first task is to take this csv and find the organization that processed the most material on 7th August 2024 and how much material in kilograms they processed on this date. Your answer should state the UUID of the organization and the total amount of kilograms processed.
 
-**Answer:**
-{"organization":"22542f6e-3d68-4f15-92f6-a864d49746cb","totalWeight":1901}
+**Answer: {"organization":"22542f6e-3d68-4f15-92f6-a864d49746cb","totalWeight":1901}**
 ### Task 2
 
 A material transfer is said to be the same as another if they are from the same material and to the same material. What was the most common transfer from one material to another and how many transfers of this type were there?
 
-**Answer:**
-
+**Answer: {"from_material":"d4c45713-c318-4d1b-9775-5b8b7bcb55da","to_material":"29be055b-dcb7-4b73-9d78-94f734334ace","count":95}**
 ### Task 3
 
 During a multi step process where material A is processed to materials (X, Y, Z, ...) and then these materials (X, Y, Z, ...) are processed to material B. We can approximate how much of material A is in material B by using a mass balance:
